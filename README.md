@@ -1,0 +1,20 @@
+- inizializzo una variabile per richiamare l'entità bottone dall'html
+- dichiaro le variabili per il nome, i km e la fascia di età
+- attivo il LISTENER al cui interno 
+    - controllo che i dati inseriti siano corretti
+    - SE i km o il nome passeggero non sono stati inseriti
+        - creare un alert che dice di inserirli
+    - ALTRIMENTI SE i km inseriti sono negativi
+        - creare un alert che dice che il valore non è vaildo
+    - ALTRIMENTI SE i km sono NaN
+        - creare un alert che dice che il valore non è vaildo
+    - ALTRIMENTI
+        - inizializzo la variabile prezzo/km = 0.21
+        - calcolo il prezzo base come prezzo/km * km
+        - inizializzo il prezzo finale = prezzo base
+        - controllo l'età del passeggero
+        - SE è sotto i 18 anni
+            - calcolo il prezzo finale come prezzo base * (1 - scontoUnder18)
+        - ALTRIMENTI SE è sopra i 65
+            - calcolo il prezzo finale come prezzo base * (1 - scontoOver65)
+        
