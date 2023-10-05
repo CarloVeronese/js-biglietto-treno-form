@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h3{
+    font-size: 16px;
+}
+
+h2{
+    font-size: 18px;
+}
+
+input,select{
+    line-height: initial;
+    width: 50%;
+}
+
+button{
+    padding: 0 20px;
+    color: #0E72ED;
+    border-color: #0E72ED;
+}
+
+main{
+    background-color: #0E72ED;
+}
+
+.main-content{
+    background-color: white;
+}

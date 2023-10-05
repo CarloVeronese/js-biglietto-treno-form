@@ -16,11 +16,13 @@ btnDOMElement.addEventListener('click', function(){
 // - SE i km o il nome passeggero non sono stati inseriti
     if(nameDOMElement == '' || kmDOMElement == ''){
 //     - creare un alert che dice di inserirli
+        alert('Devi riempire tutti i campi per poter calcolare il prezzo del biglietto')
         console.dir('nome non inserito')
     }
 //     - ALTRIMENTI SE i km inseriti sono negativi o sono NaN
     else if(kmDOMElement <= 0 || isNaN(kmDOMElement)){
 //         - creare un alert che dice che il valore non è vaildo
+        alert('Il numero di km inserito non è valido')
         console.dir('numero negativo o nullo')
     }
 //     - ALTRIMENTI
@@ -48,6 +50,15 @@ btnDOMElement.addEventListener('click', function(){
         let finalPrice = standardPrice * (1 - ticketDiscount)
         finalPrice = finalPrice.toFixed(2)
         console.log(finalPrice)
+//      - inizializzo una variabile per richiamare l'elemento nome dall'html
+        const ticketnameDOMElement = document.getElementById('ticket-name')
+        ticketnameDOMElement.innerHTML = nameDOMElement
+//      - inizializzo una variabile per richiamare l'elemento km dall'html
+        const ticketkmDOMElement = document.getElementById('ticket-km')
+        ticketkmDOMElement.innerHTML = kmDOMElement
+//      - inizializzo una variabile per richiamare l'elemento prezzo finale dall'html
+        const finalPriceDOMElement = document.getElementById('final-price')
+        finalPriceDOMElement.innerHTML = finalPrice + '&euro;'
     }
 })
         
